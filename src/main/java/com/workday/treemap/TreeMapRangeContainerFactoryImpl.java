@@ -6,7 +6,7 @@ import com.workday.model.RangeContainerFactory;
 public class TreeMapRangeContainerFactoryImpl implements RangeContainerFactory {
 
   public RangeContainer createContainer(long[] data) {
-    return new TreeMapRangeContainer(data);
+    return new TreeMapRangeContainerImpl(data);
   }
 
 }

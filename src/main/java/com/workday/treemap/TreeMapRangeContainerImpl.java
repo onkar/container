@@ -9,10 +9,10 @@ import java.util.TreeMap;
 import com.workday.model.Ids;
 import com.workday.model.RangeContainer;
 
-public class TreeMapRangeContainer implements RangeContainer {
+public class TreeMapRangeContainerImpl implements RangeContainer {
   private TreeMap<Long, Short> rangeToIndex;
 
-  public TreeMapRangeContainer(long[] data) {
+  public TreeMapRangeContainerImpl(long[] data) {
     this.rangeToIndex = new TreeMap<Long, Short>();
     for (short i = 0; i < data.length; i++) {
       rangeToIndex.put(data[i], i);
