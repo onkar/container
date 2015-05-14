@@ -1,5 +1,8 @@
 package com.workday.balancedbinarytree;
 
+/**
+ * Binary tree data structure
+ */
 public class Node {
   long value;
   short id;

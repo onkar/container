@@ -7,6 +7,9 @@ import java.util.List;
 import com.workday.model.Ids;
 import com.workday.model.RangeContainer;
 
+/**
+ * Uses balanced binary tree internally to support range scan queries.
+ */
 public class BinaryTreeRangeContainerImpl implements RangeContainer {
   private BalancedBinaryTree bbt;
 

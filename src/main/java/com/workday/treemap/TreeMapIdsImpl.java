@@ -4,6 +4,9 @@ import java.util.Enumeration;
 
 import com.workday.model.Ids;
 
+/**
+ * Uses enumerations in Java to store the list of ids
+ */
 public class TreeMapIdsImpl implements Ids {
   private Enumeration<Short> enumeration;
 

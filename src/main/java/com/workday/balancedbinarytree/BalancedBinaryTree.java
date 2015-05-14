@@ -4,10 +4,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Balanced binary tree implementation.
+ */
 public class BalancedBinaryTree {
   private Node root;
 
   public BalancedBinaryTree(long[] data) {
+    // Convert the given data to an id-value pair and store it as a balanced binary search tree
+    // structure.
     IdValue[] idValueArray = new IdValue[data.length];
     for (short i = 0; i < data.length; i++) {
       idValueArray[i] = new IdValue(i, data[i]);
@@ -20,6 +25,8 @@ public class BalancedBinaryTree {
     if (idValueArray == null || idValueArray.length == 0)
       return null;
 
+    // Calculate middle element of the array and copy left and right arrays. Then recursively call
+    // node create on both subtrees.
     int begin = 0;
     int end = idValueArray.length;
     int mid = (begin + end) / 2;
@@ -44,6 +51,16 @@ public class BalancedBinaryTree {
     return result;
   }
 
+  /**
+   * Search ids in the range.
+   * 
+   * @param root
+   * @param fromValue
+   * @param toValue
+   * @param fromInclusive
+   * @param toInclusive
+   * @param result
+   */
   private void searchIdsInRangeRecursive(Node root, long fromValue, long toValue,
       boolean fromInclusive, boolean toInclusive, List<Short> result) {
     if (root == null)
@@ -51,6 +68,8 @@ public class BalancedBinaryTree {
 
     if (fromValue != toValue) {
       if (root.value == fromValue) {
+        // If root's value equals from value and if from is included, add root to the result list
+        // and recursively call on left and right subtrees.
         if (fromInclusive)
           result.add(root.id);
 
@@ -60,6 +79,8 @@ public class BalancedBinaryTree {
       }
 
       if (root.value == toValue) {
+        // If root's value equals to value and if to is included, add root to the result list and
+        // recursively call on left and right subtrees.
         if (toInclusive)
           result.add(root.id);
         searchIdsInRangeRecursive(root.left, fromValue, toValue, fromInclusive, toInclusive, result);

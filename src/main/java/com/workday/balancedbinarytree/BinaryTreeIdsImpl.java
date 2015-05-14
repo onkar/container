@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.workday.model.Ids;
 
+/**
+ * Stores the list of shorts and an index. Index is used to iterate over the collection.
+ */
 public class BinaryTreeIdsImpl implements Ids {
   private List<Short> list;
   private short index = 0;

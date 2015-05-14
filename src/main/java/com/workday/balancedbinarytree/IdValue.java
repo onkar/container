@@ -1,5 +1,9 @@
 package com.workday.balancedbinarytree;
 
+/**
+ * Id and value pair. This is used as the content of the binary tree node. Note that it implements
+ * the comparator.
+ */
 public class IdValue implements Comparable<IdValue> {
   private short id;
   private long value;

@@ -9,6 +9,10 @@ import java.util.TreeMap;
 import com.workday.model.Ids;
 import com.workday.model.RangeContainer;
 
+/**
+ * Uses Java's TreeMap data structure to keep track of the data and the index of the data. Then to
+ * find the range, simply use subMap method that comes with the TreeMap.
+ */
 public class TreeMapRangeContainerImpl implements RangeContainer {
   private TreeMap<Long, Short> rangeToIndex;
 
