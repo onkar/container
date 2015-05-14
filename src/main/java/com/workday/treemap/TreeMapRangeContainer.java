@@ -24,7 +24,7 @@ public class TreeMapRangeContainer implements RangeContainer {
         rangeToIndex.subMap(fromValue, fromInclusive, toValue, toInclusive);
     List<Short> list = new ArrayList<Short>(m.values());
     Collections.sort(list);
-    Ids result = new IdsImpl(Collections.enumeration(list));
+    Ids result = new TreeMapIdsImpl(Collections.enumeration(list));
     return result;
   }
 

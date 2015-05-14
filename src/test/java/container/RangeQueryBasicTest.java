@@ -7,14 +7,14 @@ import org.junit.Test;
 import com.workday.model.Ids;
 import com.workday.model.RangeContainer;
 import com.workday.model.RangeContainerFactory;
-import com.workday.treemap.RangeContainerFactoryImpl;
+import com.workday.treemap.TreeMapRangeContainerFactoryImpl;
 
 public class RangeQueryBasicTest {
   private RangeContainer rc;
 
   @Before
   public void setUp() {
-    RangeContainerFactory rf = new RangeContainerFactoryImpl();
+    RangeContainerFactory rf = new TreeMapRangeContainerFactoryImpl();
     rc = rf.createContainer(new long[] {10, 12, 17, 21, 2, 15, 16});
   }
 

@@ -4,10 +4,10 @@ import java.util.Enumeration;
 
 import com.workday.model.Ids;
 
-public class IdsImpl implements Ids {
+public class TreeMapIdsImpl implements Ids {
   private Enumeration<Short> enumeration;
 
-  public IdsImpl(Enumeration<Short> enumeration) {
+  public TreeMapIdsImpl(Enumeration<Short> enumeration) {
     this.enumeration = enumeration;
   }
 
