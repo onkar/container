@@ -1,22 +1,22 @@
-package container;
+package com.workday;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.workday.balancedbinarytree.BinaryTreeRangeContainerFactoryImpl;
 import com.workday.model.Ids;
 import com.workday.model.RangeContainer;
 import com.workday.model.RangeContainerFactory;
-import com.workday.treemap.TreeMapRangeContainerFactoryImpl;
 
-public class RangeQueryBasicTestTreeMap {
+public class RangeQueryBasicTestBinaryTree {
   private RangeContainer rc;
   private RangeContainer largeContainer;
   private long[] largeData = new long[32000];
 
   @Before
   public void setUp() {
-    RangeContainerFactory rf = new TreeMapRangeContainerFactoryImpl();
+    RangeContainerFactory rf = new BinaryTreeRangeContainerFactoryImpl();
     rc = rf.createContainer(new long[] {10, 12, 17, 21, 2, 15, 16});
     int temp = 1000;
     for (int i = 0; i < 32000; i++) {
